@@ -1,6 +1,7 @@
-import CheckoutPage from "./components/CheckoutPage";
-import JerseysPage from "./components/JerseysPage";
-import LandingPage from "./components/LandingPage";
+import { useEffect } from "react";
+import CheckoutPage from "./pages/CheckoutPage";
+import JerseysPage from "./pages/JerseysPage";
+import LandingPage from "./pages/LandingPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -19,6 +20,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    document.body.setAttribute("data-theme", "dark");
+  }, []);
   return <RouterProvider router={router} />;
 }
 

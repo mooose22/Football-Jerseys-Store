@@ -10,7 +10,7 @@ const LandingPage = () => {
       }}
     >
       <div className="bg-gray-900 bg-opacity-75 p-5 rounded-lg">
-        <h1 className="text-5xl font-bold mb-4">Welcome to Jerseys Shop</h1>
+        <h1 className="text-5xl font-bold mb-4">Welcome to Footy Fabric</h1>
         <p className="text-xl mb-8 text-center ">
           Find your favorite team's jersey today!
         </p>
