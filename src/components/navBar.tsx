@@ -2,12 +2,23 @@ import { BsCart } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between w-full p-4 bg-gray-900 shadow-lg">
-      <div className="flex items-center">
-        <span className="text-white text-lg font-bold">Footy Fabric</span>
+    <div className="navbar p-4 bg-primary">
+      <div className="flex-1">
+        <a className="btn btn-ghost text-xl">Footy Fabric</a>
       </div>
-      <BsCart className="text-white text-2xl hover:text-gray-300 cursor-pointer" />
-    </nav>
+      <div className="flex-none gap-2">
+        <div className="form-control">
+          <input
+            type="text"
+            placeholder="Search Entire Store Here"
+            className="input input-bordered w-24 md:w-auto"
+          />
+        </div>
+        <div className="px-3">
+          <BsCart size={28} />
+        </div>
+      </div>
+    </div>
   );
 };
 

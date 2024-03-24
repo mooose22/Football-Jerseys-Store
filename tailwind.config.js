@@ -4,10 +4,14 @@ import daisyui from "daisyui";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["Nunito Sans", "sans-serif"], // Add this line
+      },
+    },
   },
   plugins: [daisyui],
   daisyui: {
-    themes: ["dark"],
+    themes: ["emerald"],
   },
 };

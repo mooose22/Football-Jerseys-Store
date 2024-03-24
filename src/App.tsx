@@ -21,7 +21,7 @@ const router = createBrowserRouter([
 
 function App() {
   useEffect(() => {
-    document.body.setAttribute("data-theme", "dark");
+    document.body.setAttribute("data-theme", "emerald");
   }, []);
   return <RouterProvider router={router} />;
 }
