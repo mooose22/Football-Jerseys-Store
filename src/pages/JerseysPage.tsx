@@ -1,6 +1,6 @@
-import Navbar from "../components/navBar";
+import Navbar from "../components/NavBar";
 import photo from "../assets/nav_bar.webp";
-import JerseysCard from "../components/jerseysCard";
+import JerseysCard from "../components/JerseysCard";
 import TypingEffect from "../utils/typingEffect";
 
 const JerseysPage = () => {

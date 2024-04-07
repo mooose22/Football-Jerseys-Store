@@ -1,6 +1,11 @@
 import { BsCart } from "react-icons/bs";
+import { useSelector } from "react-redux";
+import { RootState } from "../app/store";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const itemCount = useSelector((state: RootState) => state.cart.itemCount);
+
   return (
     <div className="navbar p-4 bg-primary">
       <div className="flex-1">
@@ -15,7 +20,14 @@ const Navbar = () => {
           />
         </div>
         <div className="px-3">
-          <BsCart size={28} />
+          <Link to="/checkout">
+            <BsCart size={28} />
+            {itemCount > 0 && (
+              <span className="badge badge-sm badge-secondary">
+                {itemCount}
+              </span>
+            )}
+          </Link>
         </div>
       </div>
     </div>

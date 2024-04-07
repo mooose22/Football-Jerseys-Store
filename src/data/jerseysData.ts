@@ -5,7 +5,7 @@ import liverpoolJerseyPic from "../assets/mohamed-salah-liverpool-2023-24-stadiu
 import psgJerseyPic from "../assets/shopping.webp";
 import bayernMunichJerseyPic from "../assets/munich__52325.jpg";
 
-interface JerseyData {
+export interface Jersey {
   id: number;
   name: string;
   league: string;
@@ -13,7 +13,7 @@ interface JerseyData {
   price: string;
 }
 
-export const jerseysData: JerseyData[] = [
+export const jerseysData: Jersey[] = [
   {
     id: 1,
     name: "Real Madrid Home Jersey",

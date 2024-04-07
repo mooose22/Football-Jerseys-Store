@@ -1,6 +1,13 @@
-import { jerseysData } from "../data/jerseysData";
+import { useDispatch } from "react-redux";
+import { jerseysData, Jersey } from "../data/jerseysData";
+import { addItem } from "../app/cartSlice";
 
-const jerseysCard = () => {
+const JerseysCard = () => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (jersey: Jersey) => {
+    dispatch(addItem(jersey));
+  };
   return (
     <div className="my-14 grid grid-cols-3 gap-4 justify-items-center">
       {jerseysData.map((jersey) => {
@@ -18,7 +25,10 @@ const jerseysCard = () => {
                 </p>
               </div>
               <div className="text-center">
-                <button className="bg-accent hover:bg-accent-focus text-accent-content p-2 rounded">
+                <button
+                  onClick={() => handleAddToCart(jersey)}
+                  className="bg-accent hover:bg-accent-focus text-accent-content p-2 rounded"
+                >
                   Add to Cart
                 </button>
               </div>
@@ -30,4 +40,4 @@ const jerseysCard = () => {
   );
 };
 
-export default jerseysCard;
+export default JerseysCard;
