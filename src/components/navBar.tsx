@@ -1,6 +1,6 @@
 import { BsCart } from "react-icons/bs";
 import { useSelector } from "react-redux";
-import { RootState } from "../app/store";
+import { RootState } from "../redux/store";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

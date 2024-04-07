@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { jerseysData, Jersey } from "../data/jerseysData";
-import { addItem } from "../app/cartSlice";
+import { addItem } from "../redux/cartSlice";
 
 const JerseysCard = () => {
   const dispatch = useDispatch();

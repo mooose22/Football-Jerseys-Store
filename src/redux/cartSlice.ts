@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Jersey } from "../data/jerseysData";
-import { RootState } from "../app/store";
 
 interface CartState {
   items: Jersey[];
@@ -35,8 +34,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem } = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
-
-export const selectCartItems = (state: RootState) => state.cart.items;
