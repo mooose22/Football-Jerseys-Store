@@ -36,7 +36,6 @@ const CheckoutPage = () => {
       <div className="text-xl font-bold my-4">
         Total: ${cartTotal.toFixed(2)}
       </div>{" "}
-      {/* Display the calculated total */}
       <button onClick={handleClearCart} className="btn btn-error mt-4">
         Clear Cart
       </button>
