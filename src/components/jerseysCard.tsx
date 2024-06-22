@@ -1,17 +1,23 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { jerseysData, Jersey } from "../data/jerseysData";
 import { addItem } from "../redux/cartSlice";
+import { RootState } from "../redux/store";
 
 const JerseysCard = () => {
   const dispatch = useDispatch();
+  const searchQuery = useSelector((state: RootState) => state.search.query);
 
   const handleAddToCart = (jersey: Jersey) => {
     dispatch(addItem(jersey));
   };
 
+  const filteredJerseys = jerseysData.filter((jersey) =>
+    jersey.name.toLowerCase().startsWith(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="my-14 grid grid-cols-3 gap-4 justify-items-center">
-      {jerseysData.map((jersey) => {
+      {filteredJerseys.map((jersey) => {
         return (
           <div
             key={jersey.id}

@@ -2,6 +2,7 @@ import { BsCart } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { Link } from "react-router-dom";
+import SearchStore from "./SearchStore";
 
 const Navbar = () => {
   const itemCount = useSelector((state: RootState) => state.cart.itemCount);
@@ -13,11 +14,7 @@ const Navbar = () => {
       </div>
       <div className="flex-none gap-2">
         <div className="form-control">
-          <input
-            type="text"
-            placeholder="Search Entire Store Here"
-            className="input input-bordered w-24 md:w-auto"
-          />
+          <SearchStore />
         </div>
         <div className="px-3">
           <Link to="/checkout">
