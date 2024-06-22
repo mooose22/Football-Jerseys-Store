@@ -1,4 +1,4 @@
-import Navbar from "../components/NavBar";
+import Navbar from "../components/navBar";
 import photo from "../assets/nav_bar.webp";
 import JerseysCard from "../components/JerseysCard";
 import TypingEffect from "../utils/typingEffect";
