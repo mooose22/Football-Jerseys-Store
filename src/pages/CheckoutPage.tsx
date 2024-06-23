@@ -6,7 +6,7 @@ import { Jersey } from "../data/jerseysData";
 const CheckoutPage = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
-  const cartTotal = useSelector(selectCartTotal); // Retrieve the total price of the cart
+  const cartTotal = useSelector(selectCartTotal);
 
   const handleClearCart = () => {
     dispatch(clearCart());
