@@ -12,7 +12,7 @@ const SearchStore = () => {
       placeholder="Search Entire Store"
       value={searchQuery}
       onChange={(e) => dispatch(setSearchQuery(e.target.value))}
-      className="input input-bordered w-24 md:w-auto"
+      className="input input-bordered w-48 md:w-64"
     />
   );
 };

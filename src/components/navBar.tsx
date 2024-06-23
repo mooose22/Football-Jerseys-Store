@@ -2,7 +2,6 @@ import { BsCart } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { Link } from "react-router-dom";
-import SearchStore from "./SearchStore";
 
 const Navbar = () => {
   const itemCount = useSelector((state: RootState) => state.cart.itemCount);
@@ -13,10 +12,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">Footy Fabric</a>
       </div>
       <div className="flex-none gap-2">
-        <div className="form-control">
-          <SearchStore />
-        </div>
-        <div className="px-3">
+        <div className="px-4">
           <Link to="/checkout">
             <BsCart size={28} />
             {itemCount > 0 && (

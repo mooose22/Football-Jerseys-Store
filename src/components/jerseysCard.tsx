@@ -6,13 +6,16 @@ import { RootState } from "../redux/store";
 const JerseysCard = () => {
   const dispatch = useDispatch();
   const searchQuery = useSelector((state: RootState) => state.search.query);
+  const league = useSelector((state: RootState) => state.filter.league);
 
   const handleAddToCart = (jersey: Jersey) => {
     dispatch(addItem(jersey));
   };
 
-  const filteredJerseys = jerseysData.filter((jersey) =>
-    jersey.name.toLowerCase().startsWith(searchQuery.toLowerCase())
+  const filteredJerseys = jerseysData.filter(
+    (jersey) =>
+      jersey.name.toLowerCase().startsWith(searchQuery.toLowerCase()) &&
+      (league === "All Leagues" || jersey.league === league)
   );
 
   return (
